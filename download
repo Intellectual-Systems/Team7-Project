@@ -1,0 +1,12 @@
+# Never commit these
+data/
+results/
+*.pkl
+kaggle.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
