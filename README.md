@@ -5,15 +5,6 @@ Matthew Singh · Vinayak Maharaj · Jonathan La Borde
 
 ---
 
-## Files to push to GitHub
-
-```
-press-start/
-├── press_start.ipynb   ← everything is in here
-├── .gitignore
-└── README.md
-```
-
 ## How to Run
 
 1. Go to [colab.research.google.com](https://colab.research.google.com)
