@@ -115,18 +115,39 @@ by marketing and visibility factors that no tabular model can capture.
 
 ## Key Findings
 
-**Optimal price:** Tree-based models recommend $21-$27 in 2020 real dollars, equivalent to
-approximately $26-$34 in 2025 nominal dollars. Linear Regression's $70 optimum is an
-artefact of its inability to model a curved demand relationship and is disregarded.
+**RQ1 - How strongly does price correlate with sales volume?**
+Among games with 20,000+ owners, price shows a weak-to-moderate **positive** correlation
+with owner count across all three datasets (D1: r=+0.24, D2: r=+0.16, D3: r=+0.35,
+all p < 0.0001). This is the opposite of a simple demand curve and reflects a selection
+effect - higher-priced games in this tier tend to be AAA or well-funded titles that also
+have larger marketing budgets and established audiences. Price alone does not determine
+sales volume; the positive relationship is driven by confounding quality and production
+factors captured partly by Positive_Ratio.
 
-**Are games overpriced?** The opposite - the median Steam game with measurable traction
-is priced at $7.99 nominal ($7.49 real), which is $18-$26 below the model optimum.
-Games with traction appear to be significantly underpriced.
+**RQ2 - Do holiday/seasonal releases sell more copies?**
+No. Holiday releases (Oct-Dec) show negligible differences in owner counts compared to
+non-holiday releases, and the effect is not statistically significant in any dataset
+(D1: +5.3%, p=0.081 | D2: +1.7%, p=0.301 | D3: -0.0%, p=0.991). Release timing
+within the Oct-Dec window does not meaningfully predict whether a game reaches more
+owners among games that already have traction.
 
-**Developer gain simulation:** A developer pricing at the market median of $7.99 with
-~74,000 owners earns ~$591K gross. At the model-recommended $27, the same owner count
-yields ~$2.0M - a 3.4x revenue gain. This is a conservative estimate since $27 is
-also the predicted owner-maximising price, meaning reach would not decrease.
+**RQ3 - What is the optimal price point predicted by each model?**
+Tree-based models recommend $21-$27 in 2020 real dollars, equivalent to approximately
+$26-$34 in 2025 nominal dollars (applying the 1.258 CPI factor). Linear Regression's
+$70 optimum is an artefact of its inability to model a curved demand relationship and
+is disregarded. The consensus from Decision Tree ($21.11), Random Forest ($26.73), and
+XGBoost ($21.46) points to a $26-$34 nominal range.
+
+**RQ4 - Are games currently overpriced or underpriced?**
+Underpriced. The median Steam game with measurable traction is priced at $7.99 nominal
+($7.49 real), which is $18-$26 below the model optimum. The indie pricing
+race-to-the-bottom appears counterproductive even from a pure sales-volume perspective.
+
+**RQ5 - What revenue gain would a developer have achieved?**
+A developer pricing at the market median of $7.99 with ~74,000 owners earns ~$591K
+gross. At the model-recommended $27, the same owner count yields ~$2.0M - a 3.4x
+revenue gain. This is a conservative estimate since $27 is also the predicted
+owner-maximising price, meaning reach would not decrease at the higher price point.
 
 ---
 
